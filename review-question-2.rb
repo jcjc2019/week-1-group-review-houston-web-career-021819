@@ -1,11 +1,23 @@
 # Finish the implementation of the Car class so it has the functionality described below
 
 class Car
+  @@all = []
+  attr_accessor :make, :model
+  def initialize(make, model)
+    @make = make
+    @model = model
+    @drive = "VROOOOOOOOOOOOM!"
+  end
 
-
+  def self.all
+    @@all
+  end
 
 end
 
+car = Car.new("anymake", "anymodel")
+
+#Below: source code copied from the question
 volvo_lightning = Car.new("Volvo", "Lightning")
 yugo = Car.new("Zastava", "Yugo")
 lada = Car.new("AvtoVAZ", "Lada")
